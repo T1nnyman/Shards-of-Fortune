@@ -65,6 +65,19 @@ public class LootService {
         return out;
     }
 
+    public List<Drop> rollDropsFromPools(SofConfig cfg, List<LootPool> pools) {
+        List<Drop> out = new ArrayList<>();
+        if (cfg == null || !cfg.isEnabled()) return out;
+        if (pools == null || pools.isEmpty()) return out;
+
+        for (LootPool p : pools) {
+            if (p == null) continue;
+            out.addAll(rollDrops(cfg, p));
+        }
+
+        return out;
+    }
+
     private static Integer pickWeightedIndex(LootEntry[] entries, Set<Integer> used, ThreadLocalRandom rng) {
         int total = 0;
 

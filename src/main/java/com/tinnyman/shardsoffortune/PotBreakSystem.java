@@ -43,11 +43,11 @@ public class PotBreakSystem extends EntityEventSystem<EntityStore, BreakBlockEve
         if (blockId == null || blockId.isBlank()) return;
 
         // Resolve which pool this target should use (TargetPools -> DefaultPool fallback)
-        final LootPool pool = config.resolvePoolForTarget(blockId);
-        if (pool == null) return;
+        final List<LootPool> pools = config.resolvePoolsForTarget(blockId);
+        if (pools == null || pools.isEmpty()) return;
 
-        // Roll drops from that pool
-        final List<LootService.Drop> drops = lootService.rollDrops(config, pool);
+        // Roll drops
+        final List<LootService.Drop> drops = lootService.rollDropsFromPools(config, pools);
         if (drops == null || drops.isEmpty()) return;
 
         final World world = store.getExternalData().getWorld();
