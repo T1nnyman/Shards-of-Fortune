@@ -1,6 +1,6 @@
 # 🏺 Shards of Fortune
 
-**Shards of Fortune** brings classic adventure-style loot to Hytale by making breakable pots and containers actually drop items — fully configurable, flexible, and future-proof.
+**Shards of Fortune** brings classic adventure-style loot to Hytale by making breakable pots, containers and any block actually drop items — fully configurable, flexible, and future-proof.
 
 Instead of overriding vanilla loot or hardcoding drops, this mod introduces a **loot pool system** that lets you decide *what* drops, *where*, and *how often* — all through a simple JSON config.
 
