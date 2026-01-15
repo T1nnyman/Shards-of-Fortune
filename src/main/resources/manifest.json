@@ -1,0 +1,18 @@
+{
+  "Group": "Tinnyman",
+  "Name": "Shards-of-Fortune",
+  "Version": "1.0.0",
+  "Description": "A Hytale plugin to make pots and vases drop items.",
+  "Authors": [
+    {
+      "Name": "Tinnyman",
+      "Url": "https://github.com/T1nnyman"
+    }
+  ],
+  "Website": "https://github.com/T1nnyman/Shards-of-Fortune",
+  "Main": "com.tinnyman.shardsoffortune.ShardsOfFortunePlugin",
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "DisabledByDefault": false
+}
